@@ -1,0 +1,41 @@
+body{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    background-color: rgb(41, 41, 40);
+    justify-content: center;
+    /* flex-direction: column; */
+}
+#stopwatch{
+    margin: 31vh;
+    border: 2px solid black;
+    padding: 23px 46px;
+    border-radius: 20px;
+    background-color: rgb(155, 155, 155);
+}
+#display{
+    text-align: center;
+    margin: 20px 0px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 12px;
+    padding: 0px 20px;
+    /* background-color: aqua; */
+    font-size: 50px;
+    cursor: pointer;
+}
+#btn{
+    /* background-color: blueviolet; */
+    padding: 0px 26px;
+}
+#start,#reset,#stop{
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    /* font-size: 20px; */
+    font-weight: bold;
+    font-size: 16px;
+    background-color: brown;
+    color: aliceblue;
+}
