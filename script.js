@@ -4,9 +4,6 @@ let minutes = 0;
 let seconds = 0;
 let running = false; 
 
-// let start = document.getElementById('start');
-// let reset = document.getElementById('reset');
-// let stop = document.getElementById('stop');
 
 function updatetime(){
     seconds++;
@@ -20,9 +17,13 @@ function updatetime(){
             hours++;
         }
     }
+    
     updatedisplay();
 
 }
+
+
+
 
 
 function start(){
@@ -61,5 +62,70 @@ function digit(value){
     else
     {
         return value;
+    }
+}
+
+let lapshow = document.getElementById('lapshow');
+let lapdisplay = document.getElementById('lapdisplay');
+let laporder = document.getElementById('laporder');
+
+let previoustime = 0;
+
+let lapshowingdisplay = 0;
+
+function laptime(){
+    let currenttime = hours * 3600 + minutes * 60 + seconds;
+    let lapinterval = currenttime - previoustime;
+    previoustime = currenttime;
+    laptimeshow(lapinterval);
+}
+
+
+function laptimeshow(lapinterval)
+{
+    if(lapshowingdisplay === 0){
+
+        lapshow.style.display = 'block';
+        lapshowingdisplay = 1;
+    }
+    let newli = document.createElement('li');
+    newli.textContent = formattime(lapinterval);
+    laporder.appendChild(newli);
+}
+
+function formattime(intervalORseconds){
+
+    let formathours = digit(Math.floor(intervalORseconds / 3600 ));
+    let formatminutes = digit(Math.floor((intervalORseconds % 3600) / 60 ));
+    let formatseconds = digit(Math.floor(intervalORseconds % 60 ));
+
+    return `${formathours} : ${formatminutes} : ${formatseconds}`;
+
+
+}
+
+let lap1 = 0;
+function lap(){
+    lap1++
+    lapdisplay1();
+    laptime();
+}
+
+function lapdisplay1(){
+    lapdisplay.textContent = lap1;
+}
+
+function resetlap(){
+    if(lapshowingdisplay === 1)
+    {
+
+        lapshow.style.display = 'none';
+        lapshowingdisplay = 0;
+    }
+    lap1 = 0;
+    lapdisplay1();
+    while(laporder.firstChild)
+    {
+        laporder.removeChild(laporder.firstChild);
     }
 }
