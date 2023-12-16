@@ -70,7 +70,7 @@ h1{
     background-color: aliceblue;
     border-radius: 5px;
 }
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 600px) {
     body {
         overflow-x: hidden;
       }
