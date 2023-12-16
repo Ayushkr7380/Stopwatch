@@ -80,10 +80,10 @@ h1{
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        margin-left: 10vw;
+        margin-left: 25vw;
     }
     #lapshow{
-        margin-left: 10vw;
+        margin-left: 25vw;
     }
   }
 #laporder li{
