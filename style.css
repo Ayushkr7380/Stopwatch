@@ -2,21 +2,40 @@ body{
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
-    display: flex;
+    display: grid;
     background-color: rgb(41, 41, 40);
     justify-content: center;
     /* flex-direction: column; */
 }
+h1{
+    color: white;
+    position: relative;
+    left: 7rem;
+}
 #stopwatch{
-    margin: 31vh;
+    
     border: 2px solid black;
     padding: 23px 46px;
     border-radius: 20px;
     background-color: rgb(155, 155, 155);
 }
+#show{
+    display: flex;
+}
+#lapdisplay{
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 2px 10px;
+    height: 20px;
+    width: 10px;
+    position: relative;
+    top: 48px;
+    font-weight: 900;
+    background-color: white;
+}
 #display{
     text-align: center;
-    margin: 20px 0px;
+    margin: 20px 37px;
     border: 1px solid black;
     background-color: white;
     border-radius: 12px;
@@ -28,8 +47,11 @@ body{
 #btn{
     /* background-color: blueviolet; */
     padding: 0px 26px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3px;
 }
-#start,#reset,#stop{
+#start,#reset,#stop,#lap,#resetlap{
     border: 1px solid black;
     cursor: pointer;
     border-radius: 10px;
@@ -38,4 +60,18 @@ body{
     font-size: 16px;
     background-color: brown;
     color: aliceblue;
+}
+#lapshow{
+    border: 2px solid;
+    height: 200px;
+    overflow: auto;
+    display: none;
+    margin-top: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+#laporder li{
+    font-weight:700 ;
+    font-size: 25px;
+    margin: 5px 0px;
 }
