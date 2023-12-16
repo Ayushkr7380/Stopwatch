@@ -31,11 +31,14 @@ h1{
 #lapdisplay{
     border: 2px solid;
     border-radius: 5px;
-    padding: 1vh 1vw;
-    font-size: 2.7vh;
-    height: 2vh;
+    /* padding: 1vh 1vw; */
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
     /* align-items: center; */
-    width: 1vw;
+    width: 6vw;
     position: relative;
     top: 5vh;
     font-weight: 900;
@@ -136,31 +139,22 @@ h1{
     #stopwatch{
         padding: 4vh 3vw;
         width: 55vw;
-        height: 25vh;
+        height: 20vh;
         
     }
     #show{
         justify-content: center;
     }
     #display{
-        font-size: 3vh;
+        font-size: 4vh;
         width: 20vw;
         
         margin-right: 1vw;
         padding-right: 7vw;
     }
     #start,#reset,#stop,#lap,#resetlap{
-        font-size: 2vw;
+        font-size: 3vw;
         margin: 0.1vh 0vw;
-    }
-    #btn{
-        /* background-color: blueviolet; */
-        /* padding: 0vh 1vw; */
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        /* grid-template-columns: repeat(3,1fr); */
-        /* grid-gap: 0.4vw; */
     }
     #lapshow{
         /* font-size: ; */
