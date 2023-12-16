@@ -7,13 +7,24 @@
     <title>Web Stopwatch</title>
 </head>
 <body>
+    <h1>STOPWATCH</h1>
     <div id="stopwatch">
-        <div id="display">00.00.00</div>
+        
+        <div id="show" >
+            <div id="display">00.00.00</div>
+            <div id="lapdisplay">0</div>
+        </div>
         <div id="btn">
             <button id="start" onclick="start()">Start</button>
             <button id="reset" onclick="reset()">Reset</button>
             <button id="stop" onclick="stop()" >Stop</button>
+            <button id="lap" onclick="lap()" >Lap</button>
+            <button id="resetlap" onclick="resetlap()" >ResetLap</button>
         </div>
+
+    </div>
+    <div id="lapshow">
+        <ol id="laporder"></ol>
     </div>
     <script src="script.js"></script>
 </body>
